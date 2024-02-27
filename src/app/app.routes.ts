@@ -7,15 +7,16 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full',
   },
   {
     path: 'auth',
-    loadComponent: () => import('./auth/auth.page').then( m => m.AuthPage)
+    loadComponent: () => import('./auth/auth.page').then((m) => m.AuthPage),
   },
   {
     path: 'places',
-    loadComponent: () => import('./places/places.page').then( m => m.PlacesPage)
+    loadComponent: () =>
+      import('./places/places.page').then((m) => m.PlacesPage),
   },
 ];
